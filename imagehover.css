@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #262626;
+  font-family: "Times New Roman", sans-serif;
+}
+h1 {
+  color: red;
+  margin: 5px 15px;
+  border: 3px solid black;
+  padding: 10px;
+}
+h1:hover {
+  /* padding: 15px;
+  margin: 10px 20px; */
+  color: white;
+}
+h1 .text-primary {
+  font-size: 3.5rem;
+  color: white;
+  text-transform: lowercase;
+}
+h1 .text-primary:hover {
+  font-size: 3.5rem;
+  color: red;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 1280px;
+  min-height: 500px;
+  /* background: #fff; */
+  margin: 70px auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: #ff0;
+  margin: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.container .box .ImageBox {
+  position: relative;
+  overflow: hidden;
+}
+
+.container .box .ImageBox img {
+  max-width: 100%;
+  transition: transform 2s;
+}
+
+.container .box:hover .ImageBox img {
+  transform: scale(1.2);
+}
+
+.container .box .details {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  transform: scaleY(0);
+  transition: transform 0.5s;
+  border-radius: 15px;
+}
+
+.container .box:hover .details {
+  transform: scaleY(1);
+}
+.container .box .details .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+}
+
+.container .box .details .content h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: #ff0;
+}
+
+.container .box .details .content p {
+  margin: 10px 0 0;
+  padding: 0;
+}
